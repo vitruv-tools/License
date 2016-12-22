@@ -6,18 +6,12 @@ cache:
   directories:  
    - $HOME/.m2  
 
-# Handle git submodules yourself
-git:
-    submodules: false
-
-# Enable UI
-# Use sed to replace the SSH URL with the public URL, then initialize submodules
 before_install:
-    - git clone --depth 1 https://github.com/vitruv-tools/BuildUtilities.git /tmp/BuildUtilities
+    - git clone --depth 1 https://github.com/kit-sdq/BuildUtilities.git /tmp/BuildUtilities
     - . /tmp/BuildUtilities/travis-ci/installMaven.sh
 install: true
 
 script: mvn clean verify
 
 after_success:
-- . /tmp/BuildUtilities/travis-ci/deploy.sh license releng/tools.vitruv.updatesite repository
+- . /tmp/BuildUtilities/travis-ci/deploy.sh license releng/tools.vitruv.updatesite repository vitruv-tools updatesite
