@@ -23,7 +23,7 @@
 	</properties>
 
 	<repositories>
-		<!-- If you adjust a repository here, please also adjust the repository in the b3 aggregator. -->
+		<!-- If you adjust a repository here, please also adjust the repository in the aggregator. -->
 		<repository>
 			<id>Eclipse</id>
 			<layout>p2</layout>
