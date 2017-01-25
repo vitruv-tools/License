@@ -2,7 +2,7 @@
 <feature
       id="tools.vitruv.license.feature"
       label="%licenseFeatureName"
-      version="1.0.0.qualifier"
+      version="1.0.0"
       provider-name="%licenseProviderName">
 
    <description>
